@@ -1,0 +1,105 @@
+body{
+  background-color: #aaa;
+}
+.canvas{
+   height:100%;
+   width: 100%;
+   background-color: black; 
+   margin: 60px auto;
+   border-radius: 15px;
+}
+button {
+  border-radius:5px;
+  width: 150px;
+  height: 65px;
+  background: none;
+  outline:none;/*消除button按钮点击时出现的边框*/
+  border: 0;
+  font:bold 20pt sans;
+  text-shadow:4px 4px 2px #888;
+  box-shadow: inset 0 0 0 2px #f45e61;/*设置个盒子阴影让其先前能显示*/
+  color: #f45e61;
+  margin:0 15px -70px 90px;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+}
+/*顺时钟按钮的特效*/
+.clockwise::before, .clockwise::after {
+  border-radius: 25px;
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.clockwise {
+  -webkit-transition: color 0.25s;
+          transition: color 0.25s;
+}
+.clockwise::before, .clockwise::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.clockwise::before {
+  top: 0;
+  left: 0;
+}
+.clockwise::after {
+  bottom: 0;
+  right: 0;
+}
+.clockwise:hover {
+  color: #60daaa;
+}
+.clockwise:hover::before, .clockwise:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.clockwise:hover::before {
+  border-top-color: #60daaa;
+  border-right-color: #60daaa;
+  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+          transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.clockwise:hover::after {
+  border-bottom-color: #60daaa;
+  border-left-color: #60daaa;
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+          transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
+/*逆时针按钮的特效*/
+.countDown:hover{
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-timing-function: linear;/*线性渐变*/
+  animation-iteration-count:infinite;/*infinite无穷重复*/
+}
+@keyframes fadein{
+  0%{
+    color: #33B5E5;
+    border-radius: 25px
+  }
+  20%{
+    color: #0099CC;
+    border-radius: 20px
+  }
+  40%{
+   color: #AA66CC;
+   border-radius: 15px
+  }
+  60%{
+   color: #669900;
+   border-radius: 10px
+  }
+  80%{
+   color: #FF8800;
+   border-radius: 5px
+  }
+  100%{
+   color: #fff;
+   border-radius: 0px
+  }
+} 
