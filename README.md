@@ -5,3 +5,5 @@
 ![image](https://github.com/k2-xu/canvas/blob/master/readme/01.png)
 
 ![image](https://github.com/k2-xu/canvas/blob/master/readme/02.png)
+
+详情请咨询QQ：326531916 
