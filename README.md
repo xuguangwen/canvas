@@ -6,6 +6,6 @@
 
 ![image](https://github.com/k2-xu/canvas/blob/master/readme/02.png)
 
-### [项目演示地址](https://k2-xu.github.io/canvas/canvas-showtime/)
+### [项目演示地址](https://xuguangwen.github.io/canvas/canvas-showtime/)
 
 #### 详情请咨询QQ：326531916 
